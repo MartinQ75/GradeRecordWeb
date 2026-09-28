@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace GradeRecord.Class.Models
 {
     public class SubjectModel
     {
+        [Key]
         public int Id_Subject { get; set; }
         public string Code_Subject { get; set; }
         public string Name_Subject { get; set; }

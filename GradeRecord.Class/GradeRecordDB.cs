@@ -12,12 +12,16 @@ namespace GradeRecord.Class
 {
     public class GradeRecordDB:IdentityDbContext<IdentityUser>
     {
-        public DbSet<GroupsModel> Groups { get; set; }
+        public GradeRecordDB(DbContextOptions options) : base(options)
+        {
+        }
+
+        public DbSet<GradeModel> Grades { get; set; }
+        public DbSet<GroupModel> Groups { get; set; }
         public DbSet<StudentModel> Students { get; set; }
         public DbSet<TeacherModel> Teachers { get; set; }
         public DbSet<SubjectModel> Subjects { get; set; }
-        public DbSet<Student_Group_Model> Student_Group_Models { get; set; }
-
-
+        public DbSet<Student_Group_Model> Students_Groups { get; set; }
+        public DbSet<Teacher_Subject_Group_Model> Teachers_Subjects { get; set; }
     }
 }

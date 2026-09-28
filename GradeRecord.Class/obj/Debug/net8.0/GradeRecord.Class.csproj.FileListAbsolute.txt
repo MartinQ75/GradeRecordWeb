@@ -1,0 +1,15 @@
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.deps.json
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.runtimeconfig.json
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.dll
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.pdb
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.csproj.AssemblyReference.cache
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.AssemblyInfoInputs.cache
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.AssemblyInfo.cs
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.csproj.CoreCompileInputs.cache
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.sourcelink.json
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.dll
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\refint\GradeRecord.Class.dll
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.pdb
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.genruntimeconfig.cache
+C:\Users\marti\source\repos\GradeRecord\GradeRecord.Class\obj\Debug\net8.0\ref\GradeRecord.Class.dll
