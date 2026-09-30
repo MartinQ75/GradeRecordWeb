@@ -16,7 +16,7 @@ namespace GradeRecord.Class
         GradeRecordDB IDesignTimeDbContextFactory<GradeRecordDB>.CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<GradeRecordDB>();
-            optionsBuilder.UseSqlServer("Server=MQUIRINO\\SQLEXPRESS;Database=GradeRecordDB;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-8VK13SC\\SQLEXPRESS01;Database=GradeRecordDB;Trusted_Connection=True;TrustServerCertificate=True;");
 
             return new GradeRecordDB(optionsBuilder.Options);
         }

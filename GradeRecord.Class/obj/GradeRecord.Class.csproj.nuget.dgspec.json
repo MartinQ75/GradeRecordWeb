@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\GradeRecord.Class.csproj": {}
+    "C:\\Users\\LAb b\\Source\\Repos\\GradeRecordWeb\\GradeRecord.Class\\GradeRecord.Class.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\GradeRecord.Class.csproj": {
+    "C:\\Users\\LAb b\\Source\\Repos\\GradeRecordWeb\\GradeRecord.Class\\GradeRecord.Class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\GradeRecord.Class.csproj",
+        "projectUniqueName": "C:\\Users\\LAb b\\Source\\Repos\\GradeRecordWeb\\GradeRecord.Class\\GradeRecord.Class.csproj",
         "projectName": "GradeRecord.Class",
-        "projectPath": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\GradeRecord.Class.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\obj\\",
+        "projectPath": "C:\\Users\\LAb b\\Source\\Repos\\GradeRecordWeb\\GradeRecord.Class\\GradeRecord.Class.csproj",
+        "packagesPath": "C:\\Users\\LAb b\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LAb b\\Source\\Repos\\GradeRecordWeb\\GradeRecord.Class\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LAb b\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
