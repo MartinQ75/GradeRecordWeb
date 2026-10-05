@@ -1,14 +1,24 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GradeRecord.Class;
+using GradeRecord.Class.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace GradeRecord.Web.Controllers
 {
     public class TeacherController : Controller
     {
-        // GET: TeacherController
-        public ActionResult Index()
+        private readonly IRepositoryGeneric<TeacherModel> teacherRG;
+        public TeacherController(IRepositoryGeneric<TeacherModel> teacherRG)
         {
-            return View();
+            this.teacherRG = teacherRG;
+        }
+
+        // GET: TeacherController
+        public async Task<ActionResult> Index()
+        {
+            var teachers = await this.teacherRG.GetAll();
+            return View(teachers);
         }
 
         // GET: TeacherController/Details/5
@@ -26,58 +36,51 @@ namespace GradeRecord.Web.Controllers
         // POST: TeacherController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(TeacherModel teacher)
         {
-            try
+            if (teacher == null)
             {
-                return RedirectToAction(nameof(Index));
+                throw new ArgumentNullException(nameof(teacher));
             }
-            catch
+
+            if (!ModelState.IsValid)
             {
-                return View();
+                return View(teacher);
             }
+            await teacherRG.Create(teacher);
+            return RedirectToAction("Index");
         }
 
         // GET: TeacherController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var teacher = await teacherRG.GetById(id);
+            return View(teacher);
         }
 
         // POST: TeacherController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(TeacherModel teacher)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await teacherRG.Update(teacher);
+            return RedirectToAction("Index");
         }
 
         // GET: TeacherController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            return View();
+            var teacher = await this.teacherRG.GetById(id);
+            return View(teacher);
         }
 
         // POST: TeacherController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(TeacherModel teacher)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await teacherRG.Delete(teacher.Id);
+            return RedirectToAction("Index");
         }
     }
 }

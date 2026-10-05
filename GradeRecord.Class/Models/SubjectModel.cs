@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace GradeRecord.Class.Models
 {
-    public class SubjectModel
+    public class SubjectModel:IEntity
     {
         [Key]
-        public int Id_Subject { get; set; }
+        public int Id { get; set; }
         public string Code_Subject { get; set; }
         public string Name_Subject { get; set; }
         public int Credits { get; set; }
