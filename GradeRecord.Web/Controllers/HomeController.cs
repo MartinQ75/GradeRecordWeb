@@ -75,9 +75,19 @@ namespace GradeRecord.Web.Controllers
 
                 var roles = await _userManager.GetRolesAsync(user);
 
-                if (roles.Contains("Admin") || roles.Contains("Teacher") || roles.Contains("Trainee"))
+                if (roles.Contains("Admin"))
                 {
-                    return RedirectToAction("Index", "Grade");
+                    return RedirectToAction("Index", "Admin");
+                }
+
+                if (roles.Contains("Teacher"))
+                {
+                    return RedirectToAction("Index", "Teacher");
+                }
+
+                if (roles.Contains("Student"))
+                {
+                    return RedirectToAction("Index", "Student");
                 }
             }
             return RedirectToAction("Login");

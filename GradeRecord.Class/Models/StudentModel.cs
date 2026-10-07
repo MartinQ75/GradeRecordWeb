@@ -18,7 +18,7 @@ namespace GradeRecord.Class.Models
         public string Maternal_Surname { get; set; }
         public string Email { get; set; }
         public bool Status { get; set; }
+        public string? UserId { get; set; }
         public IdentityUser? User { get; set; }
-        public string Id_User { get; set; } = null!;
     }
 }

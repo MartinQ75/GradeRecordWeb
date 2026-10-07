@@ -54,7 +54,7 @@ namespace GradeRecord.Class.Migrations
                 name: "Groups",
                 columns: table => new
                 {
-                    Id_Group = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name_Group = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Semester = table.Column<int>(type: "int", nullable: false),
@@ -64,32 +64,14 @@ namespace GradeRecord.Class.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Groups", x => x.Id_Group);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Students",
-                columns: table => new
-                {
-                    IdStudent = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Enrollment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StudentName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Paternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Maternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Students", x => x.IdStudent);
+                    table.PrimaryKey("PK_Groups", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Subjects",
                 columns: table => new
                 {
-                    Id_Subject = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Code_Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name_Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -100,27 +82,7 @@ namespace GradeRecord.Class.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Subjects", x => x.Id_Subject);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Teachers",
-                columns: table => new
-                {
-                    Id_Teacher = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Number_Employee = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Paternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Maternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Teachers", x => x.Id_Teacher);
+                    table.PrimaryKey("PK_Subjects", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -230,30 +192,81 @@ namespace GradeRecord.Class.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Students_Groups",
+                name: "Students",
                 columns: table => new
                 {
-                    Id_Student_Group = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    GroupId_Group = table.Column<int>(type: "int", nullable: false),
-                    Id_Group = table.Column<int>(type: "int", nullable: false),
-                    StudentIdStudent = table.Column<int>(type: "int", nullable: false),
-                    Id_Student = table.Column<int>(type: "int", nullable: false)
+                    Enrollment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StudentName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Paternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Maternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Students_Groups", x => x.Id_Student_Group);
+                    table.PrimaryKey("PK_Students", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Students_Groups_Groups_GroupId_Group",
-                        column: x => x.GroupId_Group,
+                        name: "FK_Students_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Teachers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Number_Employee = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Paternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Maternal_Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Teachers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Teachers_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Students_Groups",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id_Group = table.Column<int>(type: "int", nullable: false),
+                    GroupId = table.Column<int>(type: "int", nullable: false),
+                    Id_Student = table.Column<int>(type: "int", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Students_Groups", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Students_Groups_Groups_GroupId",
+                        column: x => x.GroupId,
                         principalTable: "Groups",
-                        principalColumn: "Id_Group",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Students_Groups_Students_StudentIdStudent",
-                        column: x => x.StudentIdStudent,
+                        name: "FK_Students_Groups_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "IdStudent",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -261,35 +274,35 @@ namespace GradeRecord.Class.Migrations
                 name: "Teachers_Subjects",
                 columns: table => new
                 {
-                    Id_Teacher_Subject = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TeacherId_Teacher = table.Column<int>(type: "int", nullable: false),
                     Id_Teacher = table.Column<int>(type: "int", nullable: false),
-                    SubjectId_Subject = table.Column<int>(type: "int", nullable: false),
+                    TeacherId = table.Column<int>(type: "int", nullable: false),
                     Id_Subject = table.Column<int>(type: "int", nullable: false),
-                    GroupId_Group = table.Column<int>(type: "int", nullable: false),
-                    Id_Group = table.Column<int>(type: "int", nullable: false)
+                    SubjectId = table.Column<int>(type: "int", nullable: false),
+                    Id_Group = table.Column<int>(type: "int", nullable: false),
+                    GroupId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Teachers_Subjects", x => x.Id_Teacher_Subject);
+                    table.PrimaryKey("PK_Teachers_Subjects", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Teachers_Subjects_Groups_GroupId_Group",
-                        column: x => x.GroupId_Group,
+                        name: "FK_Teachers_Subjects_Groups_GroupId",
+                        column: x => x.GroupId,
                         principalTable: "Groups",
-                        principalColumn: "Id_Group",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Teachers_Subjects_Subjects_SubjectId_Subject",
-                        column: x => x.SubjectId_Subject,
+                        name: "FK_Teachers_Subjects_Subjects_SubjectId",
+                        column: x => x.SubjectId,
                         principalTable: "Subjects",
-                        principalColumn: "Id_Subject",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Teachers_Subjects_Teachers_TeacherId_Teacher",
-                        column: x => x.TeacherId_Teacher,
+                        name: "FK_Teachers_Subjects_Teachers_TeacherId",
+                        column: x => x.TeacherId,
                         principalTable: "Teachers",
-                        principalColumn: "Id_Teacher",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -297,31 +310,31 @@ namespace GradeRecord.Class.Migrations
                 name: "Grades",
                 columns: table => new
                 {
-                    Id_Grade = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Unit = table.Column<int>(type: "int", nullable: false),
                     Grade = table.Column<double>(type: "float", nullable: false),
                     Opportunity = table.Column<int>(type: "int", nullable: false),
                     Date_Register = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    StudentIdStudent = table.Column<int>(type: "int", nullable: false),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
                     Id_Student = table.Column<int>(type: "int", nullable: false),
-                    Teacher_SubjectId_Teacher_Subject = table.Column<int>(type: "int", nullable: false),
+                    Teacher_SubjectId = table.Column<int>(type: "int", nullable: false),
                     Id_Teacher_Subject = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Grades", x => x.Id_Grade);
+                    table.PrimaryKey("PK_Grades", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Grades_Students_StudentIdStudent",
-                        column: x => x.StudentIdStudent,
+                        name: "FK_Grades_Students_StudentId",
+                        column: x => x.StudentId,
                         principalTable: "Students",
-                        principalColumn: "IdStudent",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Grades_Teachers_Subjects_Teacher_SubjectId_Teacher_Subject",
-                        column: x => x.Teacher_SubjectId_Teacher_Subject,
+                        name: "FK_Grades_Teachers_Subjects_Teacher_SubjectId",
+                        column: x => x.Teacher_SubjectId,
                         principalTable: "Teachers_Subjects",
-                        principalColumn: "Id_Teacher_Subject",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -365,39 +378,49 @@ namespace GradeRecord.Class.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Grades_StudentIdStudent",
+                name: "IX_Grades_StudentId",
                 table: "Grades",
-                column: "StudentIdStudent");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Grades_Teacher_SubjectId_Teacher_Subject",
+                name: "IX_Grades_Teacher_SubjectId",
                 table: "Grades",
-                column: "Teacher_SubjectId_Teacher_Subject");
+                column: "Teacher_SubjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Students_Groups_GroupId_Group",
+                name: "IX_Students_UserId",
+                table: "Students",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Students_Groups_GroupId",
                 table: "Students_Groups",
-                column: "GroupId_Group");
+                column: "GroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Students_Groups_StudentIdStudent",
+                name: "IX_Students_Groups_StudentId",
                 table: "Students_Groups",
-                column: "StudentIdStudent");
+                column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Teachers_Subjects_GroupId_Group",
-                table: "Teachers_Subjects",
-                column: "GroupId_Group");
+                name: "IX_Teachers_UserId",
+                table: "Teachers",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Teachers_Subjects_SubjectId_Subject",
+                name: "IX_Teachers_Subjects_GroupId",
                 table: "Teachers_Subjects",
-                column: "SubjectId_Subject");
+                column: "GroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Teachers_Subjects_TeacherId_Teacher",
+                name: "IX_Teachers_Subjects_SubjectId",
                 table: "Teachers_Subjects",
-                column: "TeacherId_Teacher");
+                column: "SubjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teachers_Subjects_TeacherId",
+                table: "Teachers_Subjects",
+                column: "TeacherId");
         }
 
         /// <inheritdoc />
@@ -428,9 +451,6 @@ namespace GradeRecord.Class.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
                 name: "Teachers_Subjects");
 
             migrationBuilder.DropTable(
@@ -444,6 +464,9 @@ namespace GradeRecord.Class.Migrations
 
             migrationBuilder.DropTable(
                 name: "Teachers");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

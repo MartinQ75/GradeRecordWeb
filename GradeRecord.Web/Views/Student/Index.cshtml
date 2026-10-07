@@ -1,0 +1,60 @@
+﻿@model GradeRecord.Class.Models.StudentHomeModel
+
+@{
+    ViewData["Title"] = "Inicio del estudiante";
+}
+
+<h1>Bienvenido</h1>
+
+<div>
+    <p>
+        <strong>Matrícula:</strong> @Model.Student.Enrollment
+    </p>
+    <p>
+        <strong>Nombre:</strong>
+        @Model.Student.StudentName
+        @Model.Student.Paternal_Surname
+        @Model.Student.Maternal_Surname
+    </p>
+    <p>
+        <strong>Correo:</strong> @Model.Student.Email
+    </p>
+</div>
+
+<hr />
+
+<h2>Kardex</h2>
+
+@if (Model.Kardex.Count == 0)
+{
+    <p>No hay calificaciones registradas todavía.</p>
+}
+else
+{
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Materia</th>
+                <th>Créditos</th>
+                <th>Calificaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var materia in Model.Kardex)
+            {
+                <tr>
+                    <td>@materia.Code_Subject</td>
+                    <td>@materia.Name_Subject</td>
+                    <td>
+                        @foreach (var grade in materia.Grades)
+                        {
+                            <span>Unidad @grade.Unit: @grade.Grade &nbsp;</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

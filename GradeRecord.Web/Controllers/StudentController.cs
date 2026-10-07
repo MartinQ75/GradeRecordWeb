@@ -1,22 +1,43 @@
 ﻿using GradeRecord.Class;
 using GradeRecord.Class.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GradeRecord.Web.Controllers
 {
     public class StudentController : Controller
     {
-        private readonly IRepositoryGeneric<StudentModel> studentRG;
-        public StudentController(IRepositoryGeneric<StudentModel> studentRG)
+        private readonly IStudentRepository studentRepository;
+        private readonly UserManager<IdentityUser> userManager;
+
+        public StudentController(IStudentRepository studentRepository,
+            UserManager<IdentityUser> userManager)
         {
-            this.studentRG = studentRG;
+            this.studentRepository = studentRepository;
+            this.userManager = userManager;
         }
+
         // GET: StudentController
         public async Task<ActionResult> Index()
         {
-            var students = await this.studentRG.GetAll();
-            return View(students);
+            var user = await userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Home");
+            } 
+            var student = await studentRepository.GetStudentByUserId(user.Id); 
+            if (student == null) 
+            { 
+                return NotFound("No se encontró un estudiante relacionado con este usuario."); 
+            } 
+            var kardex = await studentRepository.GetKardex(student.Id); 
+            var model = new StudentHomeModel 
+            { 
+                Student = student, 
+                Kardex = kardex 
+            }; 
+            return View(model); 
         }
 
         // GET: StudentController/Details/5
@@ -45,14 +66,14 @@ namespace GradeRecord.Web.Controllers
             {
                 return View(student);
             }
-            await studentRG.Create(student);
+            await studentRepository.Create(student);
             return RedirectToAction("Index");
         }
 
         // GET: StudentController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
-            var student = await studentRG.GetById(id);
+            var student = await studentRepository.GetById(id);
             return View(student);
         }
 
@@ -61,14 +82,14 @@ namespace GradeRecord.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(StudentModel student)
         {
-            await studentRG.Update(student);
+            await studentRepository.Update(student);
             return RedirectToAction("Index");
         }
 
         // GET: StudentController/Delete/5
         public async Task<ActionResult> Delete(int id)
         {
-            var student = await this.studentRG.GetById(id);
+            var student = await this.studentRepository.GetById(id);
             return View(student);
         }
 
@@ -77,7 +98,7 @@ namespace GradeRecord.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Delete(StudentModel student)
         {
-            await studentRG.Delete(student.Id);
+            await studentRepository.Delete(student.Id);
             return RedirectToAction("Index");
         }
     }

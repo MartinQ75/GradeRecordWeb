@@ -11,11 +11,10 @@ namespace GradeRecord.Class.Models
     {
         [Key]
         public int Id { get; set; }
-        public GroupModel Group { get; set; } = null!;
         public int Id_Group { get; set; }
-        public StudentModel Student { get; set; } = null!;
+        public GroupModel Group { get; set; } = null!;
         public int Id_Student { get; set; }
-        
-
+        public StudentModel Student { get; set; } = null!;
+       
     }
 }

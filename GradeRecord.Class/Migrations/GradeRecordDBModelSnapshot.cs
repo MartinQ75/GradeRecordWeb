@@ -24,11 +24,11 @@ namespace GradeRecord.Class.Migrations
 
             modelBuilder.Entity("GradeRecord.Class.Models.GradeModel", b =>
                 {
-                    b.Property<int>("Id_Grade")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Grade"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("Date_Register")
                         .HasColumnType("datetime2");
@@ -45,31 +45,25 @@ namespace GradeRecord.Class.Migrations
                     b.Property<int>("Opportunity")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentIdStudent")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Teacher_SubjectId_Teacher_Subject")
-                        .HasColumnType("int");
-
                     b.Property<int>("Unit")
                         .HasColumnType("int");
 
-                    b.HasKey("Id_Grade");
+                    b.HasKey("Id");
 
-                    b.HasIndex("StudentIdStudent");
+                    b.HasIndex("Id_Student");
 
-                    b.HasIndex("Teacher_SubjectId_Teacher_Subject");
+                    b.HasIndex("Id_Teacher_Subject");
 
                     b.ToTable("Grades");
                 });
 
             modelBuilder.Entity("GradeRecord.Class.Models.GroupModel", b =>
                 {
-                    b.Property<int>("Id_Group")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Group"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name_Group")
                         .IsRequired()
@@ -89,18 +83,18 @@ namespace GradeRecord.Class.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id_Group");
+                    b.HasKey("Id");
 
                     b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("GradeRecord.Class.Models.StudentModel", b =>
                 {
-                    b.Property<int>("IdStudent")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdStudent"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -109,9 +103,6 @@ namespace GradeRecord.Class.Migrations
                     b.Property<string>("Enrollment")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Id_User")
-                        .HasColumnType("int");
 
                     b.Property<string>("Maternal_Surname")
                         .IsRequired()
@@ -131,7 +122,7 @@ namespace GradeRecord.Class.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("IdStudent");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -140,14 +131,11 @@ namespace GradeRecord.Class.Migrations
 
             modelBuilder.Entity("GradeRecord.Class.Models.Student_Group_Model", b =>
                 {
-                    b.Property<int>("Id_Student_Group")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Student_Group"));
-
-                    b.Property<int>("GroupId_Group")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Id_Group")
                         .HasColumnType("int");
@@ -155,25 +143,22 @@ namespace GradeRecord.Class.Migrations
                     b.Property<int>("Id_Student")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentIdStudent")
-                        .HasColumnType("int");
+                    b.HasKey("Id");
 
-                    b.HasKey("Id_Student_Group");
+                    b.HasIndex("Id_Group");
 
-                    b.HasIndex("GroupId_Group");
-
-                    b.HasIndex("StudentIdStudent");
+                    b.HasIndex("Id_Student");
 
                     b.ToTable("Students_Groups");
                 });
 
             modelBuilder.Entity("GradeRecord.Class.Models.SubjectModel", b =>
                 {
-                    b.Property<int>("Id_Subject")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Subject"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Code_Subject")
                         .IsRequired()
@@ -195,25 +180,22 @@ namespace GradeRecord.Class.Migrations
                     b.Property<int>("Units")
                         .HasColumnType("int");
 
-                    b.HasKey("Id_Subject");
+                    b.HasKey("Id");
 
                     b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("GradeRecord.Class.Models.TeacherModel", b =>
                 {
-                    b.Property<int>("Id_Teacher")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Teacher"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Id_User")
-                        .HasColumnType("int");
 
                     b.Property<string>("Maternal_Surname")
                         .IsRequired()
@@ -225,10 +207,6 @@ namespace GradeRecord.Class.Migrations
 
                     b.Property<int>("Number_Employee")
                         .HasColumnType("int");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Paternal_Surname")
                         .IsRequired()
@@ -244,7 +222,7 @@ namespace GradeRecord.Class.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id_Teacher");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -253,14 +231,11 @@ namespace GradeRecord.Class.Migrations
 
             modelBuilder.Entity("GradeRecord.Class.Models.Teacher_Subject_Group_Model", b =>
                 {
-                    b.Property<int>("Id_Teacher_Subject")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Teacher_Subject"));
-
-                    b.Property<int>("GroupId_Group")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Id_Group")
                         .HasColumnType("int");
@@ -271,19 +246,13 @@ namespace GradeRecord.Class.Migrations
                     b.Property<int>("Id_Teacher")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubjectId_Subject")
-                        .HasColumnType("int");
+                    b.HasKey("Id");
 
-                    b.Property<int>("TeacherId_Teacher")
-                        .HasColumnType("int");
+                    b.HasIndex("Id_Group");
 
-                    b.HasKey("Id_Teacher_Subject");
+                    b.HasIndex("Id_Subject");
 
-                    b.HasIndex("GroupId_Group");
-
-                    b.HasIndex("SubjectId_Subject");
-
-                    b.HasIndex("TeacherId_Teacher");
+                    b.HasIndex("Id_Teacher");
 
                     b.ToTable("Teachers_Subjects");
                 });
@@ -490,14 +459,14 @@ namespace GradeRecord.Class.Migrations
                 {
                     b.HasOne("GradeRecord.Class.Models.StudentModel", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentIdStudent")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Student")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GradeRecord.Class.Models.Teacher_Subject_Group_Model", "Teacher_Subject")
                         .WithMany()
-                        .HasForeignKey("Teacher_SubjectId_Teacher_Subject")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Teacher_Subject")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Student");
@@ -509,7 +478,8 @@ namespace GradeRecord.Class.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("User");
                 });
@@ -518,14 +488,14 @@ namespace GradeRecord.Class.Migrations
                 {
                     b.HasOne("GradeRecord.Class.Models.GroupModel", "Group")
                         .WithMany()
-                        .HasForeignKey("GroupId_Group")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Group")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GradeRecord.Class.Models.StudentModel", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentIdStudent")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Student")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Group");
@@ -537,7 +507,8 @@ namespace GradeRecord.Class.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("User");
                 });
@@ -546,20 +517,20 @@ namespace GradeRecord.Class.Migrations
                 {
                     b.HasOne("GradeRecord.Class.Models.GroupModel", "Group")
                         .WithMany()
-                        .HasForeignKey("GroupId_Group")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Group")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GradeRecord.Class.Models.SubjectModel", "Subject")
                         .WithMany()
-                        .HasForeignKey("SubjectId_Subject")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Subject")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GradeRecord.Class.Models.TeacherModel", "Teacher")
                         .WithMany()
-                        .HasForeignKey("TeacherId_Teacher")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("Id_Teacher")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Group");
