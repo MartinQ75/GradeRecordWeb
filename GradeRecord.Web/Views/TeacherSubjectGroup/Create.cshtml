@@ -1,0 +1,78 @@
+﻿@model GradeRecord.Class.Models.Teacher_Subject_Group_Model
+
+@{
+    ViewData["Title"] = "Asignar Docente";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Asignar Materia y Grupo a Docente</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Docente</label>
+                            @if (ViewBag.Teachers != null)
+                            {
+                                <select asp-for="Id_Teacher" class="form-select" asp-items="ViewBag.Teachers" required>
+                                    <option value="">-- Seleccione un Docente --</option>
+                                </select>
+                            }
+                            else
+                            {
+                                <input asp-for="Id_Teacher" type="number" class="form-control" placeholder="ID del Docente" required />
+                            }
+                            <span asp-validation-for="Id_Teacher" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Materia</label>
+                            @if (ViewBag.Subjects != null)
+                            {
+                                <select asp-for="Id_Subject" class="form-select" asp-items="ViewBag.Subjects" required>
+                                    <option value="">-- Seleccione una Materia --</option>
+                                </select>
+                            }
+                            else
+                            {
+                                <input asp-for="Id_Subject" type="number" class="form-control" placeholder="ID de la Materia" required />
+                            }
+                            <span asp-validation-for="Id_Subject" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Grupo</label>
+                            @if (ViewBag.Groups != null)
+                            {
+                                <select asp-for="Id_Group" class="form-select" asp-items="ViewBag.Groups" required>
+                                    <option value="">-- Seleccione un Grupo --</option>
+                                </select>
+                            }
+                            else
+                            {
+                                <input asp-for="Id_Group" type="number" class="form-control" placeholder="ID del Grupo" required />
+                            }
+                            <span asp-validation-for="Id_Group" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-success">Guardar Asignación</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

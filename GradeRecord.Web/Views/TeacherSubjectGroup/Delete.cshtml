@@ -1,0 +1,42 @@
+﻿@model GradeRecord.Class.Models.Teacher_Subject_Group_Model
+
+@{
+    ViewData["Title"] = "Eliminar Asignación";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-danger shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Confirmar Eliminación</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-4">¿Estás seguro de que deseas eliminar esta asignación de docente?</p>
+
+                    <dl class="row">
+                        <dt class="col-sm-4">ID Asignación:</dt>
+                        <dd class="col-sm-8">@Model.Id</dd>
+
+                        <dt class="col-sm-4">Docente ID:</dt>
+                        <dd class="col-sm-8">@Model.Id_Teacher</dd>
+
+                        <dt class="col-sm-4">Materia ID:</dt>
+                        <dd class="col-sm-8">@Model.Id_Subject</dd>
+
+                        <dt class="col-sm-4">Grupo ID:</dt>
+                        <dd class="col-sm-8">@Model.Id_Group</dd>
+                    </dl>
+
+                    <form asp-action="DeleteConfirmed" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@model GradeRecord.Class.Models.GroupModel
+
+@{
+    ViewData["Title"] = "Editar Grupo";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Editar Grupo</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Name_Group" class="form-label">Nombre del Grupo</label>
+                                <input asp-for="Name_Group" class="form-control" required />
+                                <span asp-validation-for="Name_Group" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Semester" class="form-label">Semestre</label>
+                                <input asp-for="Semester" type="number" class="form-control" min="1" max="12" required />
+                                <span asp-validation-for="Semester" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Term" class="form-label">Periodo Escolar</label>
+                                <input asp-for="Term" class="form-control" required />
+                                <span asp-validation-for="Term" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Turn" class="form-label">Turno</label>
+                                <select asp-for="Turn" class="form-select" required>
+                                    <option value="Matutino">Matutino</option>
+                                    <option value="Vespertino">Vespertino</option>
+                                    <option value="Nocturno">Nocturno</option>
+                                </select>
+                                <span asp-validation-for="Turn" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" asp-for="Status" />
+                            <label class="form-check-label" asp-for="Status">
+                                Grupo Activo
+                            </label>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-primary">Actualizar Cambios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

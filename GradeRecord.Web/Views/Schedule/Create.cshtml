@@ -1,0 +1,84 @@
+﻿@model GradeRecord.Class.Models.ScheduleModel
+
+@{
+    ViewData["Title"] = "Asignar Horario";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Registrar Horario de Clase</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Id_Teacher_Subject" class="form-label">ID Asignación Docente-Materia-Grupo</label>
+                            @if (ViewBag.TeacherSubjects != null)
+                            {
+                                <select asp-for="Id_Teacher_Subject" class="form-select" asp-items="ViewBag.TeacherSubjects" required>
+                                    <option value="">-- Seleccione la clase/asignación --</option>
+                                </select>
+                            }
+                            else
+                            {
+                                <input asp-for="Id_Teacher_Subject" type="number" class="form-control" placeholder="Ej. 1" required />
+                            }
+                            <span asp-validation-for="Id_Teacher_Subject" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="DayOfWeek" class="form-label">Día de la Semana</label>
+                                <select asp-for="DayOfWeek" class="form-select" required>
+                                    <option value="">-- Seleccionar Día --</option>
+                                    <option value="Lunes">Lunes</option>
+                                    <option value="Martes">Martes</option>
+                                    <option value="Miércoles">Miércoles</option>
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                    <option value="Sábado">Sábado</option>
+                                </select>
+                                <span asp-validation-for="DayOfWeek" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Classroom" class="form-label">Aula / Salón / Laboratorio</label>
+                                <input asp-for="Classroom" class="form-control" placeholder="Ej. Aula 102, Lab Sistemas" required />
+                                <span asp-validation-for="Classroom" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="StartTime" class="form-label">Hora de Inicio</label>
+                                <input asp-for="StartTime" type="time" class="form-control" required />
+                                <span asp-validation-for="StartTime" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="EndTime" class="form-label">Hora de Fin</label>
+                                <input asp-for="EndTime" type="time" class="form-control" required />
+                                <span asp-validation-for="EndTime" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-success">Guardar Horario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

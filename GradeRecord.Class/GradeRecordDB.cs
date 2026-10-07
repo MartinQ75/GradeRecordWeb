@@ -24,6 +24,7 @@ namespace GradeRecord.Class
         public DbSet<Student_Group_Model> Students_Groups { get; set; }
         public DbSet<Teacher_Subject_Group_Model> Teachers_Subjects { get; set; }
 
+        public DbSet<ScheduleModel> Schedules { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

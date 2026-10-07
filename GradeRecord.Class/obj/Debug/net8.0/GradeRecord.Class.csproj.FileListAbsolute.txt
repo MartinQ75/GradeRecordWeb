@@ -28,3 +28,18 @@ C:\Users\LAb b\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\re
 C:\Users\LAb b\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.pdb
 C:\Users\LAb b\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.genruntimeconfig.cache
 C:\Users\LAb b\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\ref\GradeRecord.Class.dll
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.deps.json
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.runtimeconfig.json
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.dll
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\bin\Debug\net8.0\GradeRecord.Class.pdb
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.csproj.AssemblyReference.cache
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.AssemblyInfoInputs.cache
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.AssemblyInfo.cs
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.csproj.CoreCompileInputs.cache
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.sourcelink.json
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.dll
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\refint\GradeRecord.Class.dll
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.pdb
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\GradeRecord.Class.genruntimeconfig.cache
+C:\Users\luisd\Source\Repos\GradeRecordWeb\GradeRecord.Class\obj\Debug\net8.0\ref\GradeRecord.Class.dll

@@ -1,0 +1,42 @@
+﻿@model GradeRecord.Class.Models.ScheduleModel
+
+@{
+    ViewData["Title"] = "Eliminar Horario";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-danger shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Confirmar Eliminación</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-4">¿Estás seguro de que deseas eliminar este horario asignado?</p>
+
+                    <dl class="row">
+                        <dt class="col-sm-5">ID Asignación:</dt>
+                        <dd class="col-sm-7">@Model.Id_Teacher_Subject</dd>
+
+                        <dt class="col-sm-5">Día:</dt>
+                        <dd class="col-sm-7">@Model.DayOfWeek</dd>
+
+                        <dt class="col-sm-5">Horario:</dt>
+                        <dd class="col-sm-7">@Model.StartTime.ToString(@"hh\:mm") - @Model.EndTime.ToString(@"hh\:mm") hrs</dd>
+
+                        <dt class="col-sm-5">Aula:</dt>
+                        <dd class="col-sm-7">@Model.Classroom</dd>
+                    </dl>
+
+                    <form asp-action="DeleteConfirmed" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

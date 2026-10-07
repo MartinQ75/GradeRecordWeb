@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Panel de Administración";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Panel de Control - Administrador</h2>
+
+    <!-- Tarjetas con Resumen Estadístico -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Materias</h5>
+                    <p class="card-text display-6">@ViewBag.TotalSubjects</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Grupos</h5>
+                    <p class="card-text display-6">@ViewBag.TotalGroups</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Docentes</h5>
+                    <p class="card-text display-6">@ViewBag.TotalTeachers</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Alumnos</h5>
+                    <p class="card-text display-6">@ViewBag.TotalStudents</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú de Funcionalidades Administrador -->
+    <h4 class="mb-3">Módulos de Gestión</h4>
+    <div class="list-group">
+        <a asp-controller="Subject" asp-action="Index" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span><strong>1. Gestión de Materias:</strong> Alta, edición y catálogo de materias.</span>
+            <span class="btn btn-sm btn-outline-primary">Ir a Materias</span>
+        </a>
+        <a asp-controller="Group" asp-action="Index" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span><strong>2. Gestión de Grupos:</strong> Crear y administrar grupos, semestres y turnos.</span>
+            <span class="btn btn-sm btn-outline-primary">Ir a Grupos</span>
+        </a>
+        <a asp-controller="TeacherSubjectGroup" asp-action="Index" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span><strong>3. Asignación Docente - Materia - Grupo:</strong> Asignar docentes a materias y grupos.</span>
+            <span class="btn btn-sm btn-outline-primary">Ir a Asignaciones</span>
+        </a>
+        <a asp-controller="Schedule" asp-action="Index" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span><strong>4. Gestión de Horarios:</strong> Asignar días, horas y aulas a las materias.</span>
+            <span class="btn btn-sm btn-outline-primary">Ir a Horarios</span>
+        </a>
+        <a asp-controller="StudentGroup" asp-action="Index" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span><strong>5. Inscripción de Alumnos a Grupos:</strong> Asignar alumnos a sus respectivos grupos.</span>
+            <span class="btn btn-sm btn-outline-primary">Ir a Inscripciones</span>
+        </a>
+    </div>
+</div>

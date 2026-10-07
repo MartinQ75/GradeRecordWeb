@@ -88,6 +88,41 @@ namespace GradeRecord.Class.Migrations
                     b.ToTable("Groups");
                 });
 
+            modelBuilder.Entity("GradeRecord.Class.Models.ScheduleModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Classroom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DayOfWeek")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("Id_Teacher_Subject")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("Teacher_SubjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Teacher_SubjectId");
+
+                    b.ToTable("Schedules");
+                });
+
             modelBuilder.Entity("GradeRecord.Class.Models.StudentModel", b =>
                 {
                     b.Property<int>("Id")
@@ -470,6 +505,17 @@ namespace GradeRecord.Class.Migrations
                         .IsRequired();
 
                     b.Navigation("Student");
+
+                    b.Navigation("Teacher_Subject");
+                });
+
+            modelBuilder.Entity("GradeRecord.Class.Models.ScheduleModel", b =>
+                {
+                    b.HasOne("GradeRecord.Class.Models.Teacher_Subject_Group_Model", "Teacher_Subject")
+                        .WithMany()
+                        .HasForeignKey("Teacher_SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Teacher_Subject");
                 });
