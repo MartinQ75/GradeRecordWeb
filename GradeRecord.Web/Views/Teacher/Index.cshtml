@@ -1,0 +1,72 @@
+﻿@model GradeRecord.Class.Models.TeacherHomeModel
+
+@{
+    ViewData["Title"] = "Inicio del maestro";
+}
+
+<h1>Bienvenido</h1>
+
+<div>
+    <p>
+        <strong>Número de empleado:</strong>
+        @Model.Teacher.Number_Employee
+    </p>
+
+    <p>
+        <strong>Nombre:</strong>
+        @Model.Teacher.Name
+        @Model.Teacher.Paternal_Surname
+        @Model.Teacher.Maternal_Surname
+    </p>
+
+    <p>
+        <strong>Correo:</strong>
+        @Model.Teacher.Email
+    </p>
+</div>
+
+<hr />
+
+<h2>Mis materias y grupos</h2>
+
+@if (Model.Assignments.Count == 0)
+{
+    <p>No tienes materias o grupos asignados.</p>
+}
+else
+{
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Materia</th>
+                <th>Grupo</th>
+                <th>Semestre</th>
+                <th>Periodo</th>
+                <th>Turno</th>
+                <th>Administrar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var assignment in Model.Assignments)
+            {
+                <tr>
+                    <td>@assignment.Code_Subject</td>
+                    <td>@assignment.Name_Subject</td>
+                    <td>@assignment.Name_Group</td>
+                    <td>@assignment.Semester</td>
+                    <td>@assignment.Term</td>
+                    <td>@assignment.Turn</td>
+                    <td>
+                        <a asp-controller="Teacher"
+                           asp-action="Class"
+                           asp-route-id="@assignment.Id">
+                            Administrar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

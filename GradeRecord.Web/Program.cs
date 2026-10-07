@@ -12,6 +12,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddScoped(typeof(IRepositoryGeneric<>), typeof(RepositoryGeneric<>));
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
 
 // Confiura DBCOntext para la base de datos
 builder.Services.AddDbContext<GradeRecordDB>(options => options.UseSqlServer

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GradeRecord.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8ef3eb28bcb0e93da17c53a4fb76f84b3a8d039")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e3ca550322c00f29b9731ba66458dcdfed5b858")]
 [assembly: System.Reflection.AssemblyProductAttribute("GradeRecord.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GradeRecord.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

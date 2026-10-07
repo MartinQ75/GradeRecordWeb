@@ -1,0 +1,147 @@
+﻿@model GradeRecord.Class.Models.GradeCaptureModel
+
+@{
+    ViewData["Title"] = "Capturar calificaciones";
+}
+
+<h1>Capturar calificaciones</h1>
+
+<h2>@Model.Name_Subject</h2>
+
+<p>
+    <strong>Código:</strong>
+    @Model.Code_Subject
+</p>
+
+<p>
+    <strong>Grupo:</strong>
+    @Model.Name_Group
+</p>
+
+<hr />
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <p>
+        <strong>@TempData["SuccessMessage"]</strong>
+    </p>
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div>
+        @foreach (var error in ViewData.ModelState.Values
+            .SelectMany(v => v.Errors))
+        {
+            <p>
+                <strong>Error:</strong>
+                @error.ErrorMessage
+            </p>
+        }
+    </div>
+}
+
+@if (Model.Students.Count == 0)
+{
+    <p>No hay alumnos registrados en este grupo.</p>
+}
+else
+{
+    <form asp-controller="Teacher"
+          asp-action="SaveGrades"
+          method="post">
+
+        @Html.AntiForgeryToken()
+
+        <input type="hidden"
+               asp-for="AssignmentId" />
+
+        <input type="hidden"
+               asp-for="Code_Subject" />
+
+        <input type="hidden"
+               asp-for="Name_Subject" />
+
+        <input type="hidden"
+               asp-for="Name_Group" />
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Alumno</th>
+                    <th>Unidad 1</th>
+                    <th>Unidad 2</th>
+                    <th>Unidad 3</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @for (int i = 0; i < Model.Students.Count; i++)
+                {
+                    <tr>
+
+                        <td>
+                            @Model.Students[i].Enrollment
+
+                            <input type="hidden"
+                                   asp-for="Students[i].StudentId" />
+
+                            <input type="hidden"
+                                   asp-for="Students[i].Enrollment" />
+                        </td>
+
+                        <td>
+                            @Model.Students[i].StudentName
+
+                            <input type="hidden"
+                                   asp-for="Students[i].StudentName" />
+                        </td>
+
+                        <td>
+                            <input asp-for="Students[i].Unit1"
+                                   type="number"
+                                   min="0"
+                                   max="100"
+                                   step="0.01" />
+                        </td>
+
+                        <td>
+                            <input asp-for="Students[i].Unit2"
+                                   type="number"
+                                   min="0"
+                                   max="100"
+                                   step="0.01" />
+                        </td>
+
+                        <td>
+                            <input asp-for="Students[i].Unit3"
+                                   type="number"
+                                   min="0"
+                                   max="100"
+                                   step="0.01" />
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+        <br />
+
+        <button type="submit">
+            Guardar calificaciones
+        </button>
+
+    </form>
+}
+
+<br />
+
+<a asp-controller="Teacher"
+   asp-action="Class"
+   asp-route-id="@Model.AssignmentId">
+    Regresar
+</a>

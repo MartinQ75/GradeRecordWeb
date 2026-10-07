@@ -1,0 +1,86 @@
+﻿@model GradeRecord.Class.Models.TeacherClassModel
+
+@{
+    ViewData["Title"] = "Clase";
+}
+
+<h1>@Model.Name_Subject</h1>
+
+<a asp-controller="Teacher"
+   asp-action="Grades"
+   asp-route-id="@Model.AssignmentId">
+    Capturar calificaciones
+</a>
+
+<hr />
+
+<div>
+    <p>
+        <strong>Código:</strong>
+        @Model.Code_Subject
+    </p>
+
+    <p>
+        <strong>Grupo:</strong>
+        @Model.Name_Group
+    </p>
+
+    <p>
+        <strong>Semestre:</strong>
+        @Model.Semester
+    </p>
+
+    <p>
+        <strong>Periodo:</strong>
+        @Model.Term
+    </p>
+
+    <p>
+        <strong>Turno:</strong>
+        @Model.Turn
+    </p>
+</div>
+
+<hr />
+
+<h2>Alumnos</h2>
+
+@if (Model.Students.Count == 0)
+{
+    <p>No hay alumnos registrados en este grupo.</p>
+}
+else
+{
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var student in Model.Students)
+            {
+                <tr>
+                    <td>@student.Enrollment</td>
+
+                    <td>
+                        @student.StudentName
+                        @student.Paternal_Surname
+                        @student.Maternal_Surname
+                    </td>
+
+                    <td>@student.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+
+<a asp-controller="Teacher" asp-action="Index">
+    Regresar a mis materias
+</a>
