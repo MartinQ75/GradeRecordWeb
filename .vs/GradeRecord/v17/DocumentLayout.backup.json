@@ -3,52 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\marti\\source\\repos\\GradeRecord\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\views\\teacher\\grades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\views\\teacher\\grades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\views\\teacher\\class.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\views\\teacher\\class.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\models\\studentgradeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\models\\studentgradeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\models\\gradecapturemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\models\\gradecapturemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\views\\teacher\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\views\\teacher\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\models\\teacherclassmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\models\\teacherclassmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\models\\teacherhomemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\models\\teacherhomemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.class\\models\\teacherassignmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4DD00D7-AD7F-4F5D-8151-CA187B409B92}|GradeRecord.Class\\GradeRecord.Class.csproj|solutionrelative:graderecord.class\\models\\teacherassignmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|c:\\users\\marti\\source\\repos\\graderecord\\graderecord.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C45ED365-0143-4E47-910F-DF68BEC76333}|GradeRecord.Web\\GradeRecord.Web.csproj|solutionrelative:graderecord.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,157 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Grades.cshtml",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Teacher\\Grades.cshtml",
-              "RelativeDocumentMoniker": "GradeRecord.Web\\Views\\Teacher\\Grades.cshtml",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Teacher\\Grades.cshtml",
-              "RelativeToolTip": "GradeRecord.Web\\Views\\Teacher\\Grades.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEEAAAAmAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "GradeRecord.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "GradeRecord.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-07T19:48:37.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GradeCaptureModel.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\GradeCaptureModel.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\Models\\GradeCaptureModel.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\GradeCaptureModel.cs",
-              "RelativeToolTip": "GradeRecord.Class\\Models\\GradeCaptureModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T19:43:07.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Class.cshtml",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Teacher\\Class.cshtml",
-              "RelativeDocumentMoniker": "GradeRecord.Web\\Views\\Teacher\\Class.cshtml",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Teacher\\Class.cshtml",
-              "RelativeToolTip": "GradeRecord.Web\\Views\\Teacher\\Class.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-07T19:19:35.852Z",
+              "WhenOpened": "2026-10-08T18:46:10.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TeacherController.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Controllers\\TeacherController.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Web\\Controllers\\TeacherController.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Controllers\\TeacherController.cs",
-              "RelativeToolTip": "GradeRecord.Web\\Controllers\\TeacherController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAALYAAAAbAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "GradeRecord.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "GradeRecord.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T17:38:47.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITeacherRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\ITeacherRepository.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\ITeacherRepository.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\ITeacherRepository.cs",
-              "RelativeToolTip": "GradeRecord.Class\\ITeacherRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T17:19:13.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TeacherRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\TeacherRepository.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\TeacherRepository.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\TeacherRepository.cs",
-              "RelativeToolTip": "GradeRecord.Class\\TeacherRepository.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAqwLgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T17:18:29.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentGradeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\StudentGradeViewModel.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\Models\\StudentGradeViewModel.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\StudentGradeViewModel.cs",
-              "RelativeToolTip": "GradeRecord.Class\\Models\\StudentGradeViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T19:43:53.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Program.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Program.cs",
-              "RelativeToolTip": "GradeRecord.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T17:37:16.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Teacher\\Index.cshtml",
-              "RelativeDocumentMoniker": "GradeRecord.Web\\Views\\Teacher\\Index.cshtml",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Web\\Views\\Teacher\\Index.cshtml",
-              "RelativeToolTip": "GradeRecord.Web\\Views\\Teacher\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-07T19:06:06.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TeacherClassModel.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\TeacherClassModel.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\Models\\TeacherClassModel.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\TeacherClassModel.cs",
-              "RelativeToolTip": "GradeRecord.Class\\Models\\TeacherClassModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T19:14:25.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TeacherAssignmentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\TeacherAssignmentViewModel.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\Models\\TeacherAssignmentViewModel.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\TeacherAssignmentViewModel.cs",
-              "RelativeToolTip": "GradeRecord.Class\\Models\\TeacherAssignmentViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T17:14:49.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TeacherHomeModel.cs",
-              "DocumentMoniker": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\TeacherHomeModel.cs",
-              "RelativeDocumentMoniker": "GradeRecord.Class\\Models\\TeacherHomeModel.cs",
-              "ToolTip": "C:\\Users\\marti\\source\\repos\\GradeRecord\\GradeRecord.Class\\Models\\TeacherHomeModel.cs",
-              "RelativeToolTip": "GradeRecord.Class\\Models\\TeacherHomeModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T17:11:06.392Z",
+              "WhenOpened": "2026-10-08T18:45:21.443Z",
               "EditorCaption": ""
             }
           ]
